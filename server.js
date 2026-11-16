@@ -33,6 +33,9 @@ const logger = (req, res, next) => {
 };
 
 app.use(logger);
+app.get("/", (req, res) => {
+  res.send("Express Middleware API is running!");
+});
 
 // Route-specific validation middleware
 const validate = (req, res, next) => {
